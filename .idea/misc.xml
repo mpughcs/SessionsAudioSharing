@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/audioSharing/pom.xml" />
+        <option value="$PROJECT_DIR$/BackendCode/audioSharing/pom.xml" />
       </list>
     </option>
   </component>
