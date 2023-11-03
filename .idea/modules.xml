@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AudioSharingApp.iml" filepath="$PROJECT_DIR$/.idea/AudioSharingApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/audioSharing/audioSharing.iml" filepath="$PROJECT_DIR$/audioSharing/audioSharing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BackendCode/audioSharing/audioSharing.iml" filepath="$PROJECT_DIR$/BackendCode/audioSharing/audioSharing.iml" />
     </modules>
   </component>
 </project>

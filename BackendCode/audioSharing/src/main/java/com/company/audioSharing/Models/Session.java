@@ -3,8 +3,10 @@ package com.company.audioSharing.Models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "session")
@@ -16,7 +18,6 @@ public class Session {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column(name = "name")
     private String name;
 
 
@@ -27,6 +28,19 @@ public class Session {
     private String mediaUrl;
 
     private String description;
+
+    @OneToMany(mappedBy = "sessionId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Song> songs;
+
+
+    public Session(){}
+    public Session(String name, int length, String mediaUrl, String description) {
+        this.name = name;
+        this.length = length;
+        this.mediaUrl = mediaUrl;
+        this.description = description;
+        this.songs = new HashSet<>();
+    }
 
     public Integer getId() {
         return id;
@@ -74,7 +88,6 @@ public class Session {
         return "Session{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-
                 ", length=" + length +
                 ", mediaUrl='" + mediaUrl + '\'' +
                 ", description='" + description + '\'' +

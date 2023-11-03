@@ -41,7 +41,7 @@ public class SongController {
         repo.save(s);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteSong(@PathVariable int id){
         repo.deleteById(id);

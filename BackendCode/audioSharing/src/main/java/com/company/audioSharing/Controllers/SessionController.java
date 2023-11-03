@@ -39,7 +39,7 @@ public class SessionController {
 //    update
     @PutMapping()
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateAuthor(@RequestBody Session session){
+    public void updateSession(@RequestBody Session session){
         repo.save(session);
     }
 //   delete

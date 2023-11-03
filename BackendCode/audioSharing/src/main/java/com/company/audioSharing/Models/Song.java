@@ -22,10 +22,16 @@ public class Song {
     @Column(name = "media_url")
     private String mediaUrl;
 
-    @ManyToOne
-    @JoinColumn(name = "session_id")
-    private Session session;
+    private Integer sessionId;
 
+    public Song(){}
+
+    public Song(String title, Integer length, String mediaUrl, Integer sessionId) {
+        this.title = title;
+        this.length = length;
+        this.mediaUrl = mediaUrl;
+        this.sessionId = sessionId;
+    }
 
     public Integer getId() {
         return id;
